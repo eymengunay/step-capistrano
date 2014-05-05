@@ -1,0 +1,7 @@
+name: capistrano
+version: 0.0.1
+description: Capistrano deploy step for wercker
+keywords:
+  - capistrano
+  - deployment
+  - automation
