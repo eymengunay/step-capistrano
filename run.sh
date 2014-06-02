@@ -10,16 +10,17 @@ debug "gem version: $(gem --version)"
 # Capistrano
 $(gem query --name-matches 'capistrano' --installed)
 if [[ $? -ne 0 ]]; then
+    debug "capistrano not found, installing"
     $(sudo gem install capistrano)
 fi
+
+debug "capistrano version: $(cap --version)"
 
 # Capistrano composer
 $(gem query --name-matches 'capistrano-composer' --installed)
 if [[ $? -ne 0 ]]; then
     $(sudo gem install capistrano-composer)
 fi
-
-debug "capistrano version: $(cap --version)"
 
 capistrano_command="cap"
 
