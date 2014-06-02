@@ -8,19 +8,13 @@ debug "ruby version: $(ruby --version)"
 debug "gem version: $(gem --version)"
 
 # Capistrano
-$(gem query --name-matches 'capistrano' --installed)
-if [[ $? -ne 0 ]]; then
-    debug "capistrano not found, installing"
-    $(sudo gem install capistrano)
-fi
-
+debug "installing capistrano"
+$(sudo gem install capistrano)
 debug "capistrano version: $(cap --version)"
 
 # Capistrano composer
-$(gem query --name-matches 'capistrano-composer' --installed)
-if [[ $? -ne 0 ]]; then
-    $(sudo gem install capistrano-composer)
-fi
+debug "installing capistrano-composer"
+$(sudo gem install capistrano-composer)
 
 capistrano_command="cap"
 
