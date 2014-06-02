@@ -20,7 +20,7 @@ More information:
 ``` yaml
 deploy:
   steps:
-    - eymengunay/capistrano@0.0.2
+    - eymengunay/capistrano@0.0.3
 ```
 
 # Changing default task or stage
