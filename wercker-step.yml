@@ -1,5 +1,5 @@
 name: capistrano
-version: 0.0.5
+version: 0.0.6
 description: Capistrano deploy step for wercker
 keywords:
   - capistrano
