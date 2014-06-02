@@ -9,14 +9,13 @@ debug "gem version: $(gem --version)"
 
 # Capistrano
 debug "installing capistrano"
-cmd="sudo gem install capistrano"
-$cmd
+sudo gem uninstall capistrano --all --force --executables
+sudo gem install capistrano
 debug "capistrano version: $(cap --version)"
 
 # Capistrano composer
 debug "installing capistrano-composer"
-cmd="sudo gem install capistrano-composer"
-$cmd
+sudo gem install capistrano-composer
 
 capistrano_command="cap"
 
