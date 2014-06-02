@@ -4,6 +4,7 @@ if ! type gem &> /dev/null ; then
     fail "ruby gem not found."
 fi
 
+debug "ruby version: $(ruby --version)"
 debug "gem version: $(gem --version)"
 
 # Capistrano
