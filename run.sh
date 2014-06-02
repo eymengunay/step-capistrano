@@ -4,6 +4,8 @@ if ! type gem &> /dev/null ; then
     fail "ruby gem not found."
 fi
 
+debug "gem version: $(gem --version)"
+
 # Capistrano
 $(gem query --name-matches 'capistrano' --installed)
 if [[ $? -ne 0 ]]; then
