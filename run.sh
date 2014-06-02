@@ -9,7 +9,6 @@ debug "gem version: $(gem --version)"
 
 # Capistrano
 debug "installing capistrano"
-sudo gem uninstall capistrano --all --force --executables
 sudo gem install capistrano
 debug "capistrano version: $(cap --version)"
 
